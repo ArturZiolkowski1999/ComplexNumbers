@@ -101,10 +101,6 @@ TEST(testGetingComplexNum, test11)
     ist >> c1;
     EXPECT_EQ (c1, ComplexNumber(420.12345,0));
 
-//    ist << "(42 + 4i)";
-//    ist >> c1;
-//    EXPECT_EQ(c1, ComplexNumber(42,4));
-
     ist = std::stringstream();
     ist << "(420+0.i)";
     ist >> c1;
@@ -119,26 +115,32 @@ TEST(testErrorThrows, test12)
     ist = std::stringstream();
     ist << "420.12345+0i";
     EXPECT_THROW(ist >> c1, std::exception);
+    c1 = ComplexNumber();
 
     ist = std::stringstream();
     ist << "(42+0i";
     EXPECT_THROW(ist >> c1, std::exception);
+    c1 = ComplexNumber();
 
     ist = std::stringstream();
     ist << "42+0i)";
     EXPECT_THROW(ist >> c1, std::exception);
+    c1 = ComplexNumber();
 
     ist = std::stringstream();
     ist << "(42g0i)";
     EXPECT_THROW(ist >> c1, std::exception);
+    c1 = ComplexNumber();
 
     ist = std::stringstream();
     ist << "(t + 4i)";
     EXPECT_THROW(ist >> c1, std::exception);
+    c1 = ComplexNumber();
 
     ist = std::stringstream();
     ist << "(420+0.0)";
     EXPECT_THROW(ist >> c1, std::exception);
+    c1 = ComplexNumber();
 
 }
 
@@ -222,31 +224,26 @@ TEST (Test, shorterVersionComplex) {
     is << "(-i)";
     is >> z1;
     ASSERT_EQ(z1, ComplexNumber(0, -1));
-    is = std::stringstream();
     z1 = ComplexNumber();
 
     is << "(2i)";
     is >> z1;
     ASSERT_EQ(z1, ComplexNumber(0, 2));
-    is = std::stringstream();
     z1 = ComplexNumber();
 
     is << "(2)";
     is >> z1;
     ASSERT_EQ(z1, ComplexNumber(2, 0));
-    is = std::stringstream();
     z1 = ComplexNumber();
 
     is << "(-4i)";
     is >> z1;
     EXPECT_EQ(z1, ComplexNumber(0, -4));
-    is = std::stringstream();
     z1 = ComplexNumber();
 
     is << "(3-i)";
     is >> z1;
     EXPECT_EQ(z1, ComplexNumber(3, -1));
-    is = std::stringstream();
     z1 = ComplexNumber();
 }
 

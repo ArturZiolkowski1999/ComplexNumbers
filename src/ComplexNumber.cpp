@@ -112,48 +112,50 @@ std::istream &operator>>(std::istream &ist, ComplexNumber &complexObject) {
     if(ist.peek() == 'i'){ /* (-i)  (i) type */
         ist >> i;
         if (ist.peek() == ')'){
+            ist >> ket;
             complexObject.Real = 0;
             complexObject.Imaginary = 1;
+            ist.clear();
             return ist;
         }else{
             throw std::invalid_argument("unknown argument");
         }
 
     }else if(ist.peek() == '-'){
-        std::cout<<"im1\n";
         ist >> i;
         if(ist.peek() == 'i'){
-            std::cout<<"im2\n";
             ist >> i;
             if(ist.peek() == ')'){
-                std::cout<<"im3\n";
+                ist >> ket;
                 complexObject.Real = 0;
                 complexObject.Imaginary = -1;
+                ist.clear();
                 return ist;
             }else{
-                std::cout<<"im4\n";
                 throw std::invalid_argument("unknown argument");
             }
         }else{
-            std::cout<<"im5\n";
             ist.putback(i);
         }
     }
     ist >> real;
     if(ist.peek() != '-' && ist.peek() != '+'){     /* (2) type imput*/
         if(ist.peek() == ')'){
+            ist >> ket;
             complexObject.Real = real;
             complexObject.Imaginary = 0;
+            ist.clear();
             return ist;
         }
         if(ist.peek() == 'i'){      /* (2i) type imput*/
             ist >> i;
             if(ist.peek() == ')'){
+                ist >> ket;
                 complexObject.Real = 0;
                 complexObject.Imaginary = real;
+                ist.clear();
                 return ist;
             }
-
         }
         throw std::invalid_argument("unknown argument");
     }
@@ -161,12 +163,14 @@ std::istream &operator>>(std::istream &ist, ComplexNumber &complexObject) {
     if(ist.peek() == 'i') { /* (1+i) (1-i) type */
         ist >> i;
         if (ist.peek() == ')') {
+            ist >> ket;
             complexObject.Real = real;
             if(oper == '-'){
                 complexObject.Imaginary = -1;
             }else if(oper == '+'){
                 complexObject.Imaginary = 1;
             }
+            ist.clear();
             return ist;
         } else {
             throw std::invalid_argument("unknown argument");
@@ -192,9 +196,8 @@ std::istream &operator>>(std::istream &ist, ComplexNumber &complexObject) {
         complexObject.Imaginary = imaginary;
     }
 
+    ist.clear();
     return ist;
 }
-
-
 
 
