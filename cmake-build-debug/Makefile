@@ -68,10 +68,10 @@ RM = /home/artur/clion-2020.3.2/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/artur/cpp_projekty/complex_numbers
+CMAKE_SOURCE_DIR = /home/artur/cpp_projekty/complex_number
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/artur/cpp_projekty/complex_numbers/cmake-build-debug
+CMAKE_BINARY_DIR = /home/artur/cpp_projekty/complex_number/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,9 +146,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/cpp_projekty/complex_numbers/cmake-build-debug/CMakeFiles /home/artur/cpp_projekty/complex_numbers/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/cpp_projekty/complex_number/cmake-build-debug/CMakeFiles /home/artur/cpp_projekty/complex_number/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/cpp_projekty/complex_numbers/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/cpp_projekty/complex_number/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,43 +177,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named complex_numbers_run
+# Target rules for targets named complex_number_lib
 
 # Build rule for target.
-complex_numbers_run: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_numbers_run
-.PHONY : complex_numbers_run
+complex_number_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_number_lib
+.PHONY : complex_number_lib
 
 # fast build rule for target.
-complex_numbers_run/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/build
-.PHONY : complex_numbers_run/fast
+complex_number_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/build
+.PHONY : complex_number_lib/fast
 
 #=============================================================================
-# Target rules for targets named complex_numbers_lib
+# Target rules for targets named complex_number_run
 
 # Build rule for target.
-complex_numbers_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_numbers_lib
-.PHONY : complex_numbers_lib
+complex_number_run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_number_run
+.PHONY : complex_number_run
 
 # fast build rule for target.
-complex_numbers_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/build
-.PHONY : complex_numbers_lib/fast
+complex_number_run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/build
+.PHONY : complex_number_run/fast
 
 #=============================================================================
-# Target rules for targets named complex_numbers_tst
+# Target rules for targets named complex_number_tst
 
 # Build rule for target.
-complex_numbers_tst: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_numbers_tst
-.PHONY : complex_numbers_tst
+complex_number_tst: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_number_tst
+.PHONY : complex_number_tst
 
 # fast build rule for target.
-complex_numbers_tst/fast:
-	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/complex_numbers_tst.dir/build.make tst/CMakeFiles/complex_numbers_tst.dir/build
-.PHONY : complex_numbers_tst/fast
+complex_number_tst/fast:
+	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/complex_number_tst.dir/build.make tst/CMakeFiles/complex_number_tst.dir/build
+.PHONY : complex_number_tst/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -273,8 +273,8 @@ src/ComplexNumber.o: src/ComplexNumber.cpp.o
 
 # target to build an object file
 src/ComplexNumber.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/src/ComplexNumber.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/src/ComplexNumber.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/src/ComplexNumber.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/src/ComplexNumber.cpp.o
 .PHONY : src/ComplexNumber.cpp.o
 
 src/ComplexNumber.i: src/ComplexNumber.cpp.i
@@ -283,8 +283,8 @@ src/ComplexNumber.i: src/ComplexNumber.cpp.i
 
 # target to preprocess a source file
 src/ComplexNumber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/src/ComplexNumber.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/src/ComplexNumber.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/src/ComplexNumber.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/src/ComplexNumber.cpp.i
 .PHONY : src/ComplexNumber.cpp.i
 
 src/ComplexNumber.s: src/ComplexNumber.cpp.s
@@ -293,8 +293,8 @@ src/ComplexNumber.s: src/ComplexNumber.cpp.s
 
 # target to generate assembly for a file
 src/ComplexNumber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/src/ComplexNumber.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/src/ComplexNumber.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/src/ComplexNumber.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/src/ComplexNumber.cpp.s
 .PHONY : src/ComplexNumber.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -303,8 +303,8 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/src/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -313,8 +313,8 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/src/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -323,8 +323,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_run.dir/build.make CMakeFiles/complex_numbers_run.dir/src/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_numbers_lib.dir/build.make CMakeFiles/complex_numbers_lib.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_lib.dir/build.make CMakeFiles/complex_number_lib.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_number_run.dir/build.make CMakeFiles/complex_number_run.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -339,9 +339,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... complex_numbers_lib"
-	@echo "... complex_numbers_run"
-	@echo "... complex_numbers_tst"
+	@echo "... complex_number_lib"
+	@echo "... complex_number_run"
+	@echo "... complex_number_tst"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

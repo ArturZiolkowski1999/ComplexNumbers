@@ -75,9 +75,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/complex_numbers_run.dir/DependInfo.cmake"
-  "CMakeFiles/complex_numbers_lib.dir/DependInfo.cmake"
-  "tst/CMakeFiles/complex_numbers_tst.dir/DependInfo.cmake"
+  "CMakeFiles/complex_number_lib.dir/DependInfo.cmake"
+  "CMakeFiles/complex_number_run.dir/DependInfo.cmake"
+  "tst/CMakeFiles/complex_number_tst.dir/DependInfo.cmake"
   "lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "lib/googletest-master/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
